@@ -1,5 +1,7 @@
 %{
 /*
+** Derive
+** Thibaud Dauce | http://git.thibaud-dauce.fr/thibaud/derive.git
 ** Base sur l'exemple de Hugues Cassé
 ** http://www.irit.fr/ACTIVITES/EQ_HECTOR/casse/alcatel/
 */

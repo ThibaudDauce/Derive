@@ -475,6 +475,8 @@ char *yytext;
 #line 1 "src/derive.l"
 #line 2 "src/derive.l"
 /*
+** Derive
+** Thibaud Dauce | http://git.thibaud-dauce.fr/thibaud/derive.git
 ** Base sur l'exemple de Hugues Cassé
 ** http://www.irit.fr/ACTIVITES/EQ_HECTOR/casse/alcatel/
 */
@@ -485,7 +487,7 @@ char *yytext;
 #include "libExpressionMathematique.h"
 #include "y.tab.h"
 char* dupliquerChaine(char *);
-#line 489 "src/lex.yy.c"
+#line 491 "src/lex.yy.c"
 
 #define INITIAL 0
 
@@ -694,9 +696,9 @@ YY_DECL
 		}
 
 	{
-#line 19 "src/derive.l"
+#line 21 "src/derive.l"
 
-#line 700 "src/lex.yy.c"
+#line 702 "src/lex.yy.c"
 
 	while ( 1 )		/* loops until end-of-file is reached */
 		{
@@ -755,101 +757,101 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 20 "src/derive.l"
+#line 22 "src/derive.l"
 ;
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 21 "src/derive.l"
+#line 23 "src/derive.l"
 return EXIT;
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 22 "src/derive.l"
+#line 24 "src/derive.l"
 return OP_COS;
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 23 "src/derive.l"
+#line 25 "src/derive.l"
 return OP_SIN;
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 24 "src/derive.l"
+#line 26 "src/derive.l"
 return OP_TAN;
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 25 "src/derive.l"
+#line 27 "src/derive.l"
 return OP_EXP;
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 26 "src/derive.l"
+#line 28 "src/derive.l"
 return OP_LOG;
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
-#line 27 "src/derive.l"
+#line 29 "src/derive.l"
 {yylval.ch = dupliquerChaine(yytext); return VAR;}
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
-#line 28 "src/derive.l"
+#line 30 "src/derive.l"
 {yylval.val = atof(yytext); return NB;}
 	YY_BREAK
 case 10:
 YY_RULE_SETUP
-#line 29 "src/derive.l"
+#line 31 "src/derive.l"
 return OP_ADD;
 	YY_BREAK
 case 11:
 YY_RULE_SETUP
-#line 30 "src/derive.l"
+#line 32 "src/derive.l"
 return OP_SOUS;
 	YY_BREAK
 case 12:
 YY_RULE_SETUP
-#line 31 "src/derive.l"
+#line 33 "src/derive.l"
 return OP_MUL;
 	YY_BREAK
 case 13:
 YY_RULE_SETUP
-#line 32 "src/derive.l"
+#line 34 "src/derive.l"
 return OP_DIV;
 	YY_BREAK
 case 14:
 YY_RULE_SETUP
-#line 33 "src/derive.l"
+#line 35 "src/derive.l"
 return OP_POW;
 	YY_BREAK
 case 15:
 YY_RULE_SETUP
-#line 34 "src/derive.l"
+#line 36 "src/derive.l"
 return PAR_G;
 	YY_BREAK
 case 16:
 YY_RULE_SETUP
-#line 35 "src/derive.l"
+#line 37 "src/derive.l"
 return PAR_D;
 	YY_BREAK
 case 17:
 YY_RULE_SETUP
-#line 36 "src/derive.l"
+#line 38 "src/derive.l"
 return VIRGULE;
 	YY_BREAK
 case 18:
 /* rule 18 can match eol */
 YY_RULE_SETUP
-#line 37 "src/derive.l"
+#line 39 "src/derive.l"
 return FIN;
 	YY_BREAK
 case 19:
 YY_RULE_SETUP
-#line 38 "src/derive.l"
+#line 40 "src/derive.l"
 ECHO;
 	YY_BREAK
-#line 853 "src/lex.yy.c"
+#line 855 "src/lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -1844,7 +1846,7 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 38 "src/derive.l"
+#line 40 "src/derive.l"
 
 
 

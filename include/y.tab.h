@@ -88,7 +88,7 @@ extern int yydebug;
 typedef union YYSTYPE YYSTYPE;
 union YYSTYPE
 {
-#line 15 "src/derive.y" /* yacc.c:1909  */
+#line 17 "src/derive.y" /* yacc.c:1909  */
 float val;char *ch;EM_ExpressionMathematique expr;
 
 #line 95 "include/y.tab.h" /* yacc.c:1909  */

@@ -65,6 +65,8 @@
 #line 1 "src/derive.y" /* yacc.c:339  */
 
 /*
+** Derive
+** Thibaud Dauce | http://git.thibaud-dauce.fr/thibaud/derive.git
 ** Base sur l'exemple de Hugues Cassé
 ** http://www.irit.fr/ACTIVITES/EQ_HECTOR/casse/alcatel/
 */
@@ -76,7 +78,7 @@
 #define AFFICHER 0
 #define QUITTER 1
 
-#line 80 "src/y.tab.c" /* yacc.c:339  */
+#line 82 "src/y.tab.c" /* yacc.c:339  */
 
 # ifndef YY_NULLPTR
 #  if defined __cplusplus && 201103L <= __cplusplus
@@ -154,10 +156,10 @@ extern int yydebug;
 typedef union YYSTYPE YYSTYPE;
 union YYSTYPE
 {
-#line 15 "src/derive.y" /* yacc.c:355  */
+#line 17 "src/derive.y" /* yacc.c:355  */
 float val;char *ch;EM_ExpressionMathematique expr;
 
-#line 161 "src/y.tab.c" /* yacc.c:355  */
+#line 163 "src/y.tab.c" /* yacc.c:355  */
 };
 # define YYSTYPE_IS_TRIVIAL 1
 # define YYSTYPE_IS_DECLARED 1
@@ -172,7 +174,7 @@ int yyparse (EM_ExpressionMathematique* pResultat, char** pVariable, int* pComma
 
 /* Copy the second part of user declarations.  */
 
-#line 176 "src/y.tab.c" /* yacc.c:358  */
+#line 178 "src/y.tab.c" /* yacc.c:358  */
 
 #ifdef short
 # undef short
@@ -471,8 +473,8 @@ static const yytype_uint8 yytranslate[] =
   /* YYRLINE[YYN] -- Source line where rule number YYN was defined.  */
 static const yytype_uint8 yyrline[] =
 {
-       0,    40,    40,    44,    45,    48,    49,    50,    51,    52,
-      53,    54,    55,    56,    57,    58,    59,    60,    61
+       0,    42,    42,    46,    47,    50,    51,    52,    53,    54,
+      55,    56,    57,    58,    59,    60,    61,    62,    63
 };
 #endif
 
@@ -1281,109 +1283,109 @@ yyreduce:
   switch (yyn)
     {
         case 2:
-#line 40 "src/derive.y" /* yacc.c:1646  */
+#line 42 "src/derive.y" /* yacc.c:1646  */
     {YYACCEPT;}
-#line 1287 "src/y.tab.c" /* yacc.c:1646  */
+#line 1289 "src/y.tab.c" /* yacc.c:1646  */
     break;
 
   case 3:
-#line 44 "src/derive.y" /* yacc.c:1646  */
+#line 46 "src/derive.y" /* yacc.c:1646  */
     {*pResultat = (yyvsp[-2].expr); *pVariable = (yyvsp[0].ch); *pCommande = AFFICHER;}
-#line 1293 "src/y.tab.c" /* yacc.c:1646  */
+#line 1295 "src/y.tab.c" /* yacc.c:1646  */
     break;
 
   case 4:
-#line 45 "src/derive.y" /* yacc.c:1646  */
+#line 47 "src/derive.y" /* yacc.c:1646  */
     {*pCommande = QUITTER;}
-#line 1299 "src/y.tab.c" /* yacc.c:1646  */
+#line 1301 "src/y.tab.c" /* yacc.c:1646  */
     break;
 
   case 5:
-#line 48 "src/derive.y" /* yacc.c:1646  */
+#line 50 "src/derive.y" /* yacc.c:1646  */
     {(yyval.expr) = EM_creerAPartirDUneVariable((yyvsp[0].ch));}
-#line 1305 "src/y.tab.c" /* yacc.c:1646  */
+#line 1307 "src/y.tab.c" /* yacc.c:1646  */
     break;
 
   case 6:
-#line 49 "src/derive.y" /* yacc.c:1646  */
+#line 51 "src/derive.y" /* yacc.c:1646  */
     {(yyval.expr) = EM_creerAPartirDUnNombre((yyvsp[0].val));}
-#line 1311 "src/y.tab.c" /* yacc.c:1646  */
+#line 1313 "src/y.tab.c" /* yacc.c:1646  */
     break;
 
   case 7:
-#line 50 "src/derive.y" /* yacc.c:1646  */
+#line 52 "src/derive.y" /* yacc.c:1646  */
     {(yyval.expr) = EM_dupliquer((yyvsp[-1].expr));}
-#line 1317 "src/y.tab.c" /* yacc.c:1646  */
+#line 1319 "src/y.tab.c" /* yacc.c:1646  */
     break;
 
   case 8:
-#line 51 "src/derive.y" /* yacc.c:1646  */
+#line 53 "src/derive.y" /* yacc.c:1646  */
     {(yyval.expr) = EM_creerAPartirDUneOperationUnaire(MOINS, (yyvsp[0].expr));}
-#line 1323 "src/y.tab.c" /* yacc.c:1646  */
+#line 1325 "src/y.tab.c" /* yacc.c:1646  */
     break;
 
   case 9:
-#line 52 "src/derive.y" /* yacc.c:1646  */
+#line 54 "src/derive.y" /* yacc.c:1646  */
     {(yyval.expr) = EM_creerAPartirDUneOperationUnaire(SIN, (yyvsp[-1].expr));}
-#line 1329 "src/y.tab.c" /* yacc.c:1646  */
+#line 1331 "src/y.tab.c" /* yacc.c:1646  */
     break;
 
   case 10:
-#line 53 "src/derive.y" /* yacc.c:1646  */
+#line 55 "src/derive.y" /* yacc.c:1646  */
     {(yyval.expr) = EM_creerAPartirDUneOperationUnaire(COS, (yyvsp[-1].expr));}
-#line 1335 "src/y.tab.c" /* yacc.c:1646  */
+#line 1337 "src/y.tab.c" /* yacc.c:1646  */
     break;
 
   case 11:
-#line 54 "src/derive.y" /* yacc.c:1646  */
+#line 56 "src/derive.y" /* yacc.c:1646  */
     {(yyval.expr) = EM_creerAPartirDUneOperationUnaire(TAN, (yyvsp[-1].expr));}
-#line 1341 "src/y.tab.c" /* yacc.c:1646  */
+#line 1343 "src/y.tab.c" /* yacc.c:1646  */
     break;
 
   case 12:
-#line 55 "src/derive.y" /* yacc.c:1646  */
+#line 57 "src/derive.y" /* yacc.c:1646  */
     {(yyval.expr) = EM_creerAPartirDUneOperationUnaire(EXP, (yyvsp[-1].expr));}
-#line 1347 "src/y.tab.c" /* yacc.c:1646  */
+#line 1349 "src/y.tab.c" /* yacc.c:1646  */
     break;
 
   case 13:
-#line 56 "src/derive.y" /* yacc.c:1646  */
+#line 58 "src/derive.y" /* yacc.c:1646  */
     {(yyval.expr) = EM_creerAPartirDUneOperationUnaire(LOG, (yyvsp[-1].expr));}
-#line 1353 "src/y.tab.c" /* yacc.c:1646  */
+#line 1355 "src/y.tab.c" /* yacc.c:1646  */
     break;
 
   case 14:
-#line 57 "src/derive.y" /* yacc.c:1646  */
+#line 59 "src/derive.y" /* yacc.c:1646  */
     {(yyval.expr) = EM_creerAPartirDUneOperationBinaire(ADDITION, (yyvsp[-2].expr), (yyvsp[0].expr));}
-#line 1359 "src/y.tab.c" /* yacc.c:1646  */
+#line 1361 "src/y.tab.c" /* yacc.c:1646  */
     break;
 
   case 15:
-#line 58 "src/derive.y" /* yacc.c:1646  */
+#line 60 "src/derive.y" /* yacc.c:1646  */
     {(yyval.expr) = EM_creerAPartirDUneOperationBinaire(SOUSTRACTION, (yyvsp[-2].expr), (yyvsp[0].expr));}
-#line 1365 "src/y.tab.c" /* yacc.c:1646  */
+#line 1367 "src/y.tab.c" /* yacc.c:1646  */
     break;
 
   case 16:
-#line 59 "src/derive.y" /* yacc.c:1646  */
+#line 61 "src/derive.y" /* yacc.c:1646  */
     {(yyval.expr) = EM_creerAPartirDUneOperationBinaire(MULTIPLICATION, (yyvsp[-2].expr), (yyvsp[0].expr));}
-#line 1371 "src/y.tab.c" /* yacc.c:1646  */
+#line 1373 "src/y.tab.c" /* yacc.c:1646  */
     break;
 
   case 17:
-#line 60 "src/derive.y" /* yacc.c:1646  */
+#line 62 "src/derive.y" /* yacc.c:1646  */
     {(yyval.expr) = EM_creerAPartirDUneOperationBinaire(DIVISION, (yyvsp[-2].expr), (yyvsp[0].expr));}
-#line 1377 "src/y.tab.c" /* yacc.c:1646  */
+#line 1379 "src/y.tab.c" /* yacc.c:1646  */
     break;
 
   case 18:
-#line 61 "src/derive.y" /* yacc.c:1646  */
+#line 63 "src/derive.y" /* yacc.c:1646  */
     {(yyval.expr) = EM_creerAPartirDUneOperationBinaire(EXPOSANT, (yyvsp[-2].expr), (yyvsp[0].expr));}
-#line 1383 "src/y.tab.c" /* yacc.c:1646  */
+#line 1385 "src/y.tab.c" /* yacc.c:1646  */
     break;
 
 
-#line 1387 "src/y.tab.c" /* yacc.c:1646  */
+#line 1389 "src/y.tab.c" /* yacc.c:1646  */
       default: break;
     }
   /* User semantic actions sometimes alter yychar, and that requires
@@ -1611,7 +1613,7 @@ yyreturn:
 #endif
   return yyresult;
 }
-#line 63 "src/derive.y" /* yacc.c:1906  */
+#line 65 "src/derive.y" /* yacc.c:1906  */
 
 
 int yyerror(char *msg){
